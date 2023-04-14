@@ -20,7 +20,7 @@
    ```
 
 1.4. Fijar una altura al contenedor del mapa en **style.css**:
-   ```
+   ```javascript
    #mapa { height: 360px; }
    ```
 
@@ -54,19 +54,19 @@
   ```
   
 2.3. En caso de ocupar Mapbox, agregar el token al inicio del código. Pueden encontrarlos en el archivo **token.js**
-  ```
+  ```javascript
   let mitoken = 
   ```
 
 2.4. Agregaremos un marcador
-  ```
+  ```javascript
   L.marker([-33.456, -70.594]).addTo(mimapa);
   ```
 
 ### 3. Puntos desde una base de datos
 
 3.1. Agregar datos al inicio de **script.js** en el siguiente formato:
-  ```
+  ```javascript
   let midata = [
     {
       "Lugar": "Quito",
@@ -78,7 +78,7 @@
   ```
 
 3.2. Crear función para cada dato en mi listado:
-  ```
+  ```javascript
   for (let i = 0; i < midata.length; i++) {
     let milugar = midata[i];
     L.marker([milugar.Latitude, milugar.Longitude]).addTo(mimapa);
@@ -88,7 +88,7 @@
 ### 4. Cambiar el marcador
 
 4.1. Para estilar el marcador deberás crear una variable antes del loop
-  ```
+  ```javascript
   let flagIcon = L.icon({
     iconUrl: 'https://cdn.glitch.com/25b5e6be-ae39-454a-8198-ac955e888873%2F1F6A9_color.png?v=1591912202480',
     iconSize: [20, 20],
@@ -98,18 +98,18 @@
   ```
 
 4.2. Luego, agregarla en la función **L.marker**
-  ```
+  ```javascript
   L.marker([milugar.Latitude, milugar.Longitude], {icon: flagIcon}).addTo(mimapa);
   ```
   
 ### 5. Agregar un popup
 
 5.1. Crear la variable de popup **dentro del loop**. En este caso agregamos la columna de Lugar como título y la columna de Fecha.
-  ```
+  ```javascript
   let popupText = "<h3>" + milugar.Place + "</h3>" + " " + milugar.Fecha;
   ```
 
 5.2. Finalmente, agregamos el popup dentro de la función **L.marker**
-  ```
+  ```javascript
   L.marker([milugar.Latitude, milugar.Longitude], {icon: flagIcon}).bindPopup(popupText).addTo(mimapa);
   ```
