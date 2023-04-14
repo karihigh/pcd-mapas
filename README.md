@@ -106,7 +106,7 @@
 
 5.1. Crear la variable de popup **dentro del loop**. En este caso agregamos la columna de Lugar como título y la columna de Fecha.
   ```javascript
-  let popupText = "<h3>" + milugar.Place + "</h3>" + " " + milugar.Fecha;
+  let popupText = "<h3>" + milugar.Place + "</h3>" + milugar.Fecha;
   ```
 
 5.2. Finalmente, agregamos el popup dentro de la función **L.marker**
