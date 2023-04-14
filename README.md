@@ -28,7 +28,7 @@
 
 2.1. Crear la variable "mimapa" y ejecutar la función de Leaflet. También definiremos el punto donde nuestro mapa empezará y el zoom.
   ```javascript
-  let mimapa = L.map('mapa').setView([-33.45, -70.59], 14);
+  let miMapa = L.map('mapa').setView([-33.45, -70.59], 14);
   ```
 
 2.2. Agregar la base del mapa (tiles)
@@ -38,7 +38,7 @@
   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  }).addTo(map);
+  }).addTo(miMapa);
   ```
 
   - Opción B (Mapbox) *(requiere un [token de acceso](https://docs.mapbox.com/help/getting-started/access-tokens/))*
@@ -49,25 +49,25 @@
         id: 'mapbox/outdoors-v11',
         tileSize: 512,
         zoomOffset: -1,
-        accessToken: mitoken
-    }).addTo(mimapa);
+        accessToken: miToken
+    }).addTo(miMapa);
   ```
   
 2.3. En caso de ocupar Mapbox, agregar el token al inicio del código. Pueden encontrarlos en el archivo **token.js**
-  ```javascript
-  let mitoken = 
+  ```
+  let miToken = 
   ```
 
 2.4. Agregaremos un marcador
-  ```javascript
-  L.marker([-33.456, -70.594]).addTo(mimapa);
+  ```
+  L.marker([-33.456, -70.594]).addTo(miMapa);
   ```
 
 ### 3. Puntos desde una base de datos
 
 3.1. Agregar datos al inicio de **script.js** en el siguiente formato:
-  ```javascript
-  let midata = [
+  ```
+  let miData = [
     {
       "Lugar": "Quito",
       "Latitude": 51.5073509,
@@ -78,17 +78,17 @@
   ```
 
 3.2. Crear función para cada dato en mi listado:
-  ```javascript
-  for (let i = 0; i < midata.length; i++) {
-    let milugar = midata[i];
-    L.marker([milugar.Latitude, milugar.Longitude]).addTo(mimapa);
+  ```
+  for (let i = 0; i < miData.length; i++) {
+    let miLugar = miData[i];
+    L.marker([miLugar.Latitude, miLugar.Longitude]).addTo(miMapa);
   }
   ```
 
 ### 4. Cambiar el marcador
 
 4.1. Para estilar el marcador deberás crear una variable antes del loop
-  ```javascript
+  ```
   let flagIcon = L.icon({
     iconUrl: 'https://cdn.glitch.com/25b5e6be-ae39-454a-8198-ac955e888873%2F1F6A9_color.png?v=1591912202480',
     iconSize: [20, 20],
@@ -98,18 +98,18 @@
   ```
 
 4.2. Luego, agregarla en la función **L.marker**
-  ```javascript
-  L.marker([milugar.Latitude, milugar.Longitude], {icon: flagIcon}).addTo(mimapa);
+  ```
+  L.marker([miLugar.Latitude, miLugar.Longitude], {icon: flagIcon}).addTo(miMapa);
   ```
   
 ### 5. Agregar un popup
 
 5.1. Crear la variable de popup **dentro del loop**. En este caso agregamos la columna de Lugar como título y la columna de Fecha.
-  ```javascript
-  let popupText = "<h3>" + milugar.Place + "</h3>" + milugar.Fecha;
+  ```
+  let popupText = "<h3>" + miLugar.Lugar + "</h3>" + miLugar.Fecha;
   ```
 
 5.2. Finalmente, agregamos el popup dentro de la función **L.marker**
-  ```javascript
-  L.marker([milugar.Latitude, milugar.Longitude], {icon: flagIcon}).bindPopup(popupText).addTo(mimapa);
+  ```
+  L.marker([miLugar.Latitude, miLugar.Longitude], {icon: flagIcon}).bindPopup(popupText).addTo(miMapa);
   ```
