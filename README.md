@@ -5,22 +5,22 @@
 ### 1. Configuración básica
 
 1.1. Incluir el archivo CSS de Leaflet en el head del proyecto en **index.html**
-   ```
+   ```html
    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin=""/>
    ```
 
 1.2. Incluir el archivo JavaScript de Leaflet después del CSS
-   ```
+   ```html
    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
    ```
 
 1.3. Agregar un elemento div con un id donde quieres que aparezca el mapa
-   ```
+   ```html
    <div id="mapa"></div>
    ```
 
 1.4. Fijar una altura al contenedor del mapa en **style.css**:
-   ```javascript
+   ```css
    #mapa { height: 360px; }
    ```
 
