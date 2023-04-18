@@ -1,4 +1,4 @@
-### Cartografía crítica y mapas en la web
+# Cartografía crítica y mapas en la web
 
 Esta es la documentación del taller realizado el 14 de abril de 2023 durante el Processing Community Day de Quito. 
 
