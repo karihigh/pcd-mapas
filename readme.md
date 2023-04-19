@@ -2,9 +2,12 @@
 
 Esta es la documentación del taller realizado el 14 de abril de 2023 durante el Processing Community Day de Quito. 
 
-- Aquí están los [slides]() de la clase  
-- En este repositorio está el código fuente del mapa realizado y también se puede ver en [Glitch]()
+- Aquí están los [slides](https://github.com/karihigh/pcd-mapas/blob/main/PCD%20Quito_%20Maps.pdf) de la clase. Los links a cada proyeco están en la presentación.
+- En este repositorio está el código fuente del mapa realizado y también se puede ver en [Glitch](https://glitch.com/edit/#!/hipopomapa)
+- Las instrucciones del taller están en este [documento](https://github.com/karihigh/pcd-mapas/blob/main/instructions.md)
 
 
 ## Referencias bibliográficas
-(en proceso)
+- Crampton, J.W. (2011) Mapping: A critical introduction to cartography and GIS. Wiley-Blackwell. 
+- Monmonier, M. (1996) How to lie with maps. Chicago: University of Chicago Press. 
+
