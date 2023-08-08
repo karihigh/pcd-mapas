@@ -1,3 +1,6 @@
+
+![Screenshot 2023-08-08 at 18 31 15](https://github.com/karihigh/pcd-mapas/assets/17555735/50670b3f-b5a1-4246-8f72-7fb1bce19283)
+
 # Cartografía crítica y mapas en la web
 
 Esta es la documentación del taller realizado el 14 de abril de 2023 durante el Processing Community Day de Quito. 
